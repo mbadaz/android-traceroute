@@ -1,10 +1,10 @@
-package com.synaptictools.sample
+package com.synaptictools.traceroutesample
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
-import com.synaptictools.sample.databinding.ActivityMainBinding
+import com.synaptictools.traceroutesample.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     companion object {

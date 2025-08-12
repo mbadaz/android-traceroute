@@ -1,4 +1,4 @@
-package com.synaptictools.sample
+package com.synaptictools.traceroutesample
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
