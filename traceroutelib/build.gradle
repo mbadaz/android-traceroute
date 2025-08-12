@@ -3,19 +3,17 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'org.jetbrains.dokka'
-    id 'com.vanniktech.maven.publish'
 }
 
 android {
     compileSdk compile_sdk_version
+    namespace "com.synaptictools.traceroute"
 
     defaultConfig {
         minSdk min_sdk_version
         targetSdk compile_sdk_version
 
-        versionCode 1
         version = "1.0.0"
-        versionName "$version"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -50,12 +48,13 @@ android {
             ignoreExitValue true
         }
     }
+    ndkVersion '29.0.13846066 rc3'
 }
 
 task sourcesJar(type: Jar) {
     group = 'jar'
     from android.sourceSets.main.java.srcDirs
-    classifier = 'sources'
+    archiveClassifier = 'sources'
 }
 
 task javadoc(type: Javadoc) {
@@ -65,7 +64,7 @@ task javadoc(type: Javadoc) {
 
 task javadocJar(type: Jar, dependsOn: dokkaJavadoc) {
     group = 'jar'
-    classifier = 'javadoc'
+    archiveClassifier = 'javadoc'
     from javadoc.destinationDir
 }
 
