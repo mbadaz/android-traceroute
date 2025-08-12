@@ -9,6 +9,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include <string.h>
 #include <sys/socket.h>
 #include <poll.h>
 //#include <netinet/icmp6.h>
